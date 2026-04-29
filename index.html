@@ -1,84 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rod's Cafe — Mais que café. Uma experiência.</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rod's Café</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-<nav id="navbar">
-  <div class="logo">
-    <a href="#" style="text-decoration: none; color: inherit; font-family: 'Playfair Display', serif;">Rod's<br>Café</a>
-  </div>
-  
-  <ul class="nav-links">
-    <li><a href="#inicio">Início</a></li>
-    <li><a href="#cardapio">Cardápio</a></li>
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#ambiente">Ambiente</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-  
-  <a href="#" class="btn-pedido">Pedido</a>
-</nav>
+<div class="cursor-glow" id="cursorGlow"></div>
 
 <section class="hero" id="inicio">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-grain"></div>
+  <div class="light-sweep"></div>
+
+  <div class="particles" id="particles"></div>
+
+  <div class="gold-line"></div>
+
+  <nav id="navbar">
+    <a href="#" class="logo">Rod's<br>Café</a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#ambiente">Ambiente</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="#" class="btn-pedido">Pedido</a>
+  </nav>
+
   <div class="hero-content">
-    <p class="hero-eyebrow">Bem-vindo ao Rod's Café</p>
+    <p class="eyebrow">Bem-vindo ao Rod's Café</p>
+
     <h1 class="hero-title">
-      Mais que café.
-      <em>Uma experiência.</em>
+      <span class="title-line">
+        <span class="title-word">Mais&nbsp;</span>
+        <span class="title-word">que&nbsp;</span>
+        <span class="title-word">café.</span>
+      </span>
+      <span class="title-line-italic">
+        <span class="title-italic">Uma experiência.</span>
+      </span>
     </h1>
-    <p class="hero-sub">Grãos selecionados. Preparo artesanal. Momentos inesquecíveis.</p>
+
+    <p class="hero-desc">
+      Grãos selecionados, preparo artesanal e um ambiente feito para você se sentir em casa.
+    </p>
+
     <div class="hero-actions">
-      <a href="#cardapio" class="btn-primary">Cardápio</a>
+      <a href="#cardapio" class="btn-gold">Ver Cardápio</a>
+      <a href="#" class="btn-ghost">Nossa História</a>
     </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-bar"></div>
+    <span>Scroll</span>
   </div>
 </section>
 
-<section class="h-cardapio" id="cardapio" style="padding: 100px 80px; background: var(--cream, #F5EFE6);">
-  <div class="filtros" style="margin-bottom: 40px;">
+<section class="h-cardapio" id="cardapio">
+  <div class="filtros reveal">
     <button>Todos</button>
     <button>Cafés</button>
     <button>Doces</button>
   </div>
 
   <section class="categoria">
-    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: var(--espresso, #2C1A0E); margin-bottom: 20px;">Cafés Especiais</h2>
-    
-    <div class="cards" style="display: flex; gap: 20px;">
-      
-      <div class="card" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center;">
-        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80" alt="Cappuccino" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
-        <h3 style="margin: 15px 0 5px; font-family: 'Playfair Display', serif;">Cappuccino</h3>
-        <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Café cremoso e saboroso.</p>
-        <span style="font-weight: bold; color: var(--gold, #C8922A); display: block; margin-bottom: 15px;">R$ 15,90</span>
-        <button style="padding: 8px 20px; border: 1px solid #2C1A0E; background: transparent; cursor: pointer; transition: 0.3s;">Adicionar</button>
+    <h2 class="reveal">Cafés Especiais</h2>
+    <div class="cards">
+      <div class="card reveal">
+        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Café cremoso e saboroso.</p>
+        <span>R$ 15,90</span>
+        <button>Adicionar</button>
       </div>
-
-      <div class="card" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center;">
-        <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&q=80" alt="Espresso" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
-        <h3 style="margin: 15px 0 5px; font-family: 'Playfair Display', serif;">Espresso</h3>
-        <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Café puro e intenso.</p>
-        <span style="font-weight: bold; color: var(--gold, #C8922A); display: block; margin-bottom: 15px;">R$ 8,90</span>
-        <button style="padding: 8px 20px; border: 1px solid #2C1A0E; background: transparent; cursor: pointer; transition: 0.3s;">Adicionar</button>
+      <div class="card reveal">
+        <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&q=80" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Café puro e intenso.</p>
+        <span>R$ 8,90</span>
+        <button>Adicionar</button>
       </div>
-
     </div>
   </section>
 </section>
 
 <script>
-  // Navbar scroll - mantém a sombra quando o usuário rolar a página para baixo
+  /* ── Controle de Rolagem da Navbar ── */
   window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  /* ── Cursor glow ── */
+  const glow = document.getElementById('cursorGlow');
+  document.addEventListener('mousemove', e => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top  = e.clientY + 'px';
+  });
+
+  /* ── Floating particles ── */
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement('div');
+    p.className = 'p';
+    const size = Math.random() * 6 + 2;
+    p.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%;
+      bottom:${Math.random()*30}%;
+      animation-duration:${Math.random()*12+8}s;
+      animation-delay:${Math.random()*10}s;
+      opacity:0;
+    `;
+    container.appendChild(p);
+  }
+
+  /* ── Efeito Reveal no Scroll ── */
+  // Seleciona todos os elementos que têm a classe 'reveal'
+  const reveals = document.querySelectorAll('.reveal');
+
+  // Cria o observador para checar quando eles entram na tela
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      // Se o elemento entrou na tela
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible'); // Adiciona a classe que mostra o elemento
+        observer.unobserve(entry.target); // Para de observar depois que apareceu a primeira vez
+      }
+    });
+  }, {
+    rootMargin: "0px",
+    threshold: 0.15 // Dispara quando 15% do elemento estiver visível
+  });
+
+  // Aplica o observador em cada elemento
+  reveals.forEach(reveal => {
+    revealObserver.observe(reveal);
   });
 </script>
 </body>
